@@ -8,7 +8,7 @@ siteTitle.addEventListener('mouseenter',()=>{
 
 siteTitle.addEventListener("mouseleave", ()=>{
     siteTitle.style.fontSize = "4rem";
-    siteTitle.style.color = "black";
+    siteTitle.style.color = "white";
 });
 
 const headerImg = document.querySelector("header.intro > img");
@@ -45,4 +45,28 @@ window.addEventListener("load", ()=>{
     body.style.transition = "300ms ease-in";
     body.style.background = "black";
     body.style.color = "white";
+});
+
+const h2 = document.querySelector("h2");
+
+window.addEventListener("keydown", ()=>{
+    h2.style.color = "crimson";
+});
+
+const p = document.querySelector("p");
+
+p.addEventListener("copy", (e)=>{
+    p.style.color = "yellow";
+    e.stopPropagation();
+});
+
+document.body.addEventListener("copy", ()=>{
+    document.body.style.color = "green";
+});
+
+let counter = 0;
+
+window.addEventListener('scroll',()=>{
+    counter++;
+    siteTitle.innerHTML = `${counter}`;
 });
