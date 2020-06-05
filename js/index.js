@@ -70,3 +70,10 @@ window.addEventListener('scroll',()=>{
     counter++;
     siteTitle.innerHTML = `${counter}`;
 });
+
+window.addEventListener('resize', ()=>{
+    const dimensions = document.createElement("p");
+    dimensions.textContent = window.innerWidth + ' ' + window.innerHeight;
+    dimensions.style.color = "white"
+    document.body.prepend(dimensions);
+});
