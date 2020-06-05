@@ -77,3 +77,11 @@ window.addEventListener('resize', ()=>{
     dimensions.style.color = "white"
     document.body.prepend(dimensions);
 });
+
+const images = document.querySelectorAll("img");
+
+images.forEach(img=>{
+    img.addEventListener("drag", ()=>{
+        img.style.display = "none"
+    });
+});
