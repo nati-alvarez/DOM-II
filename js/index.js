@@ -31,9 +31,18 @@ headerImg.addEventListener("dblclick", ()=>{
 const links = document.querySelectorAll("a");
 
 links.forEach(link=>{
+    link.style.color = "white";
     link.addEventListener("click", e =>{
         e.preventDefault();
-        window.alert("Woah! You clicked a link!")
+        window.alert("Woah! You clicked a link!");
     });
 });
 
+window.addEventListener("load", ()=>{
+    const body = document.querySelector("body");
+    const header = document.querySelector("header");
+    header.style.background = "black";
+    body.style.transition = "300ms ease-in";
+    body.style.background = "black";
+    body.style.color = "white";
+});
